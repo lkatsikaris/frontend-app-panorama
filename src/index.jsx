@@ -22,9 +22,7 @@ subscribe(APP_READY, () => {
         <ExamplePage />
         <Footer />
       </AppProvider>
-    </React.StrictMode>,
-    document.getElementById('root')
-  )
+    </React.StrictMode>, document.getElementById('root'))
 });
 
 subscribe(APP_INIT_ERROR, (error) => {
