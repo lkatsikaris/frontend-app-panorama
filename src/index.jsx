@@ -1,3 +1,4 @@
+import React from "react";
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
@@ -11,7 +12,6 @@ import Header from '@edx/frontend-component-header';
 import Footer from '@edx/frontend-component-footer';
 import messages from './i18n';
 import ExamplePage from './example/ExamplePage';
-import React from "react";
 
 import './index.scss';
 
@@ -24,7 +24,8 @@ subscribe(APP_READY, () => {
         <ExamplePage />
         <Footer />
       </AppProvider>
-    </React.StrictMode>)
+    </React.StrictMode>
+    )
 });
 
 subscribe(APP_INIT_ERROR, (error) => {
