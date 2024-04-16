@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
@@ -7,7 +7,6 @@ import {
   APP_INIT_ERROR, APP_READY, subscribe, initialize,
 } from '@edx/frontend-platform';
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
-import ReactDOM from 'react-dom';
 
 import Header from '@edx/frontend-component-header';
 import Footer from '@edx/frontend-component-footer';
@@ -17,16 +16,14 @@ import ExamplePage from './example/ExamplePage';
 import './index.scss';
 
 subscribe(APP_READY, () => {
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(
+  ReactDOM.render(
     <React.StrictMode>
       <AppProvider>
         <Header />
         <ExamplePage />
         <Footer />
       </AppProvider>
-    </React.StrictMode>
-    )
+    </React.StrictMode>, document.getElementById("root"))
 });
 
 subscribe(APP_INIT_ERROR, (error) => {
