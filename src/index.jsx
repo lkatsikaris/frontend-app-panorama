@@ -15,14 +15,13 @@ import ExamplePage from './example/ExamplePage';
 import './index.scss';
 
 subscribe(APP_READY, () => {
-  ReactDOM.render(
-    <AppProvider>
-      <Header />
-      <ExamplePage />
-      <Footer />
-    </AppProvider>,
-    document.getElementById('root'),
-  );
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(
+    <React.StrictMode>
+        <AppProvider>
+          <App />
+        </AppProvider>
+    </React.StrictMode>)
 });
 
 subscribe(APP_INIT_ERROR, (error) => {
