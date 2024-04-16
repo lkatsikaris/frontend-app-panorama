@@ -17,12 +17,13 @@ import './index.scss';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(<React.StrictMode>
-      <AppProvider>
-        <Header />
-        <ExamplePage />
-        <Footer />
-      </AppProvider>
-    </React.StrictMode>, document.getElementById('root'))});
+    <AppProvider>
+      <Header />
+      <ExamplePage />
+      <Footer />
+    </AppProvider>
+  </React.StrictMode>, document.getElementById('root'))
+});
 
 subscribe(APP_INIT_ERROR, (error) => {
   ReactDOM.render(<ErrorPage message={error.message} />, document.getElementById('root'));
