@@ -12,7 +12,6 @@ import Header from '@edx/frontend-component-header';
 import Footer from '@edx/frontend-component-footer';
 import messages from './i18n';
 import ExamplePage from './example/ExamplePage';
-
 import './index.scss';
 
 subscribe(APP_READY, () => {
