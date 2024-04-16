@@ -7,6 +7,7 @@ transifex_input = $(i18n)/transifex_input.json
 transifex_temp = ./temp/babel-plugin-formatjs
 
 precommit:
+	npm run lint
 	npm audit
 
 requirements:
