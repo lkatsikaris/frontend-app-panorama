@@ -21,7 +21,7 @@ subscribe(APP_READY, () => {
       <AppProvider>
         <Header />
         <ExamplePage />
-        <Footer />
+        {/* <Footer /> */}
       </AppProvider>
     </React.StrictMode>, document.getElementById("root"))
 });
