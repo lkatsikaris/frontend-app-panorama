@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from 'react-dom';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -16,15 +16,13 @@ import ExamplePage from './example/ExamplePage';
 import './index.scss';
 
 subscribe(APP_READY, () => {
-  ReactDOM.render(
-    <React.StrictMode>
+  ReactDOM.render(<React.StrictMode>
       <AppProvider>
         <Header />
         <ExamplePage />
-        {/* <Footer /> */}
+        <Footer />
       </AppProvider>
-    </React.StrictMode>, document.getElementById("root"))
-});
+    </React.StrictMode>, document.getElementById('root'))});
 
 subscribe(APP_INIT_ERROR, (error) => {
   ReactDOM.render(<ErrorPage message={error.message} />, document.getElementById('root'));
